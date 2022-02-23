@@ -14,6 +14,8 @@ import CardContent from '@material-ui/core/CardContent';
 import Avatar from '@material-ui/core/Avatar';
 import BookmarkBorderIcon from '@material-ui/icons/BookmarkBorder';
 import Pagination from '@material-ui/lab/Pagination';
+import { routes } from './route';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
@@ -72,6 +74,8 @@ function App() {
         <Toolbar>
           <Typography variant="h6" color="primary" >
             Blog
+            {routes()}
+            <Link to="/home">Home</Link>
           </Typography>
         </Toolbar>
       </AppBar>
